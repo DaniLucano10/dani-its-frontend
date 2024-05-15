@@ -5,7 +5,7 @@ import { ListItem, UnorderedList, } from "@chakra-ui/react";
 export const CourseAccordion = () => {
   return (
     <>
-      <Container as="section" maxWidth="6xl">
+      <Container as="section" maxWidth="6xl" h="100%">
         <Stack direction="row">
           <Image src='../src/assets/imgs/sap_funcional.png' />
         </Stack>

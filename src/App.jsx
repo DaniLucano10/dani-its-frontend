@@ -6,6 +6,9 @@ import { Container, Heading } from "@chakra-ui/react";
 import { Requeriment } from "./components/Requeriment";
 import { PaymentMethods } from "./components/PaymentMethods";
 import { Certification } from "./components/Certification";
+import { Teachers } from "./components/Teachers";
+import { Questions } from "./components/Questions";
+import { Information } from "./components/Information";
 
 function App() {
 
@@ -20,7 +23,11 @@ function App() {
         <CourseAccordion/>
         <Requeriment/>
         <PaymentMethods />
-        <Certification />
+        <Certification  />
+        <Teachers />
+        <Questions />
+
+        <Information />
       </div>
     </>
   );
