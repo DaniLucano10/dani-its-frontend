@@ -5,8 +5,9 @@ export const Navar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            INSTITUTE
+          <a className="navbar-brand" href="https://its.institute/" target="_blank">
+            <img src="../src/assets/imgs/logo.png"
+              width="200" />
           </a>
           <button
             className="navbar-toggler"

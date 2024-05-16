@@ -26,7 +26,6 @@ function App() {
         <Certification  />
         <Teachers />
         <Questions />
-
         <Information />
       </div>
     </>

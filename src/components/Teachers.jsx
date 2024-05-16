@@ -1,9 +1,10 @@
 import { Avatar, Badge, Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 
 export const Teachers = () => {
+
   return (
     <>
-      <Container as="section" maxWidth="8xl">
+      <Container as="section" maxWidth="8xl" my={-150}>
         <Heading>NUESTROS INSTRUCTORES</Heading>
 
         <Flex my="50">

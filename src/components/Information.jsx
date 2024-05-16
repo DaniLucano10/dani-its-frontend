@@ -1,8 +1,6 @@
-import { Box, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
-import { Button } from "react-bootstrap";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+
 
 export const Information = () => {
   return (

@@ -4,7 +4,7 @@ import { Container, Heading } from "@chakra-ui/react";
 export const Questions = () => {
   return (
     <>
-      <Container as="section" maxWidth="8xl">
+      <Container as="section" maxWidth="8xl" my={300}>
         <Heading fontSize="4xl" my="60px">
           PREGUNTAS FRECUENTES
         </Heading>
