@@ -9,10 +9,10 @@ export const Questions = () => {
           PREGUNTAS FRECUENTES
         </Heading>
 
-        <div>
+        <div className="container">
           <Accordion>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>¿Cómo ingreso a las clases?</Accordion.Header>
+              <Accordion.Header> <Heading fontSize="20" color="#09155f">¿Cómo ingreso a las clases?</Heading> </Accordion.Header>
               <Accordion.Body>
                 Todos los enlaces y recursos necesarios serán enviados por
                 correo electrónico un día antes de iniciar el curso, debe estar
@@ -23,7 +23,7 @@ export const Questions = () => {
 
             <Accordion.Item eventKey="1">
               <Accordion.Header>
-                ¿Tendré acceso al sistema SAP?
+                <Heading fontSize="20" color="#09155f">¿Tendré acceso al sistema SAP?</Heading>
               </Accordion.Header>
               <Accordion.Body>
                 Claro que sí, enviaran por correo electrónico el instalador SAP
@@ -34,7 +34,9 @@ export const Questions = () => {
             </Accordion.Item>
 
             <Accordion.Item eventKey="2">
-              <Accordion.Header>¿Como obtengo mi certificado?</Accordion.Header>
+              <Accordion.Header>
+                <Heading fontSize="20" color="#09155f">¿Como obtengo mi certificado?</Heading>
+              </Accordion.Header>
               <Accordion.Body>
                 Aprobando el examen de certificación, el certificado será
                 enviado en digital vía correo electrónico, en el tiempo
@@ -45,7 +47,7 @@ export const Questions = () => {
 
             <Accordion.Item eventKey="3">
               <Accordion.Header>
-                ¿El certificado tiene peso internacional?
+                <Heading fontSize="20" color="#09155f">¿El certificado tiene peso internacional?</Heading>
               </Accordion.Header>
               <Accordion.Body>
                 ¡Sí! Nuestras certificaciones son a nivel Key User, con peso
@@ -54,7 +56,9 @@ export const Questions = () => {
             </Accordion.Item>
 
             <Accordion.Item eventKey="4">
-              <Accordion.Header>¿La certificación caduca?</Accordion.Header>
+              <Accordion.Header>
+                <Heading fontSize="20" color="#09155f">¿La certificación caduca?</Heading>
+              </Accordion.Header>
               <Accordion.Body>
                 La certificación y conocimientos no tienen caducidad, sin
                 embargo los conocimientos se deben mantener a la vanguardia de
@@ -66,7 +70,7 @@ export const Questions = () => {
 
             <Accordion.Item eventKey="5">
               <Accordion.Header>
-                Si no apruebo el curso, tengo oportunidad para certificarme?
+                <Heading fontSize="20" color="#09155f">Si no apruebo el curso, tengo oportunidad para certificarme?</Heading>
               </Accordion.Header>
               <Accordion.Body>
                 Si, puede rendir un examen sustitutorio realizando la gestión
@@ -76,7 +80,7 @@ export const Questions = () => {
 
             <Accordion.Item eventKey="6">
               <Accordion.Header>
-                ¿Cómo accederé a mis cursos complementarios?
+                <Heading fontSize="20" color="#09155f">¿Cómo accederé a mis cursos complementarios?</Heading>
               </Accordion.Header>
               <Accordion.Body>
                 A través de una plataforma tecnológica.
@@ -85,7 +89,7 @@ export const Questions = () => {
 
             <Accordion.Item eventKey="7">
               <Accordion.Header>
-                ¿Como me contacto con el área académica?
+                <Heading fontSize="20" color="#09155f">¿Como me contacto con el área académica?</Heading>
               </Accordion.Header>
               <Accordion.Body>
                 Puedes contactar al área académica a través del número: : +51
@@ -95,7 +99,7 @@ export const Questions = () => {
 
             <Accordion.Item eventKey="8">
               <Accordion.Header>
-                ¿Cómo contacto a Soporte Técnico?
+                <Heading fontSize="20" color="#09155f">¿Cómo contacto a Soporte Técnico?</Heading>
               </Accordion.Header>
               <Accordion.Body>
                 Puedes contactar al área de Soporte Técnico a través del número:
