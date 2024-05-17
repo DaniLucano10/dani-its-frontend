@@ -1,4 +1,4 @@
-import { Button, Container, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, Stack, Text, useDisclosure } from "@chakra-ui/react"
+import { Button, Container, Heading, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Stack, Text, useDisclosure } from "@chakra-ui/react"
 import { ModalHeader } from "react-bootstrap"
 
 
@@ -8,7 +8,7 @@ export const PaymentMethods = () => {
     return (
         <>
             <Container as="section" maxWidth="8xl" my={-200}>
-                <Heading>METODOS DE PAGO</Heading>
+                <Heading color="#09155f">METODOS DE PAGO</Heading>
 
                 <Stack as="section" maxWidth="7xl" my="105px" direction="row">
 

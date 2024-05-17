@@ -17,13 +17,14 @@ function App() {
       <div>
         <Navar />
         <Container as="section" maxWidth="8xl">
-          <Heading my="50px" fontSize="5xl">PORTAL INFORMATIVO</Heading>
-          <Heading my="50px" fontSize="4xl">Cargos por modulos</Heading>
+          <Heading my="50px" fontSize="60px" color="#09155f">PORTAL </Heading>
+          <Heading my="-60px" fontSize="60px" color="#019CFE">INFORMATIVO</Heading>
+          <Heading my="150px" fontSize="40px" color="#09155f">CARGOS POR MÓDULOS</Heading>
         </Container>
-        <CourseAccordion/>
-        <Requeriment/>
+        <CourseAccordion />
+        <Requeriment />
         <PaymentMethods />
-        <Certification  />
+        <Certification />
         <Teachers />
         <Questions />
         <Information />

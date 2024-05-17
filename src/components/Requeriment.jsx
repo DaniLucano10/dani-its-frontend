@@ -5,13 +5,13 @@ export const Requeriment = () => {
     return (
         <>
             <Container as="section" maxWidth="8xl" my={350} >
-                <Heading >REQUISITOS DE INSCRIPCÍON</Heading>
+                <Heading color="#09155f">REQUISITOS DE INSCRIPCÍON</Heading>
                 <Text>Envia los siguientes requisitos a tu asesor comercial para formalizar la inscripción</Text>
                 <Container as="section" maxWidth="6xl" my={50}>
                     <Stack direction="row">
                         <Card >
                             <CardBody>
-                                <Text>Voucher o captura de pago</Text>
+                                <Text color="#000000">Voucher o captura de pago</Text>
                                 <Image
                                     boxSize="100px"
                                     src="../src/assets/imgs/voucher.jpg"
@@ -21,7 +21,7 @@ export const Requeriment = () => {
 
                         <Card >
                             <CardBody>
-                                <Text>Correo electrónico personal</Text>
+                                <Text color="#000000">Correo electrónico personal</Text>
                                 <Image
                                     boxSize="100px"
                                     src="../src/assets/imgs/correo.jpg"
@@ -31,7 +31,7 @@ export const Requeriment = () => {
 
                         <Card>
                             <CardBody>
-                                <Text>Foto de la parte frontal del DNI</Text>
+                                <Text color="#000000">Foto de la parte frontal del DNI</Text>
                                 <Image
                                     boxSize="100px"
                                     src="../src/assets/imgs/dni.jpg"
@@ -39,9 +39,9 @@ export const Requeriment = () => {
                             </CardBody>
                         </Card>
 
-                        <Card>
-                            <CardBody>
-                                <Text>Rellenar ficha de inscripción</Text>
+                        <Card >
+                            <CardBody >
+                                <Text color="#000000">Rellenar ficha de inscripción</Text>
                                 <Image
                                     boxSize="100px"
                                     src="../src/assets/imgs/ficha.jpg"

@@ -7,13 +7,13 @@ export const Certification = () => {
   return (
     <>
       <Container as="section" maxWidth="8xl" my={300} >
-        <Heading>CERTIFICACÍON</Heading>
+        <Heading color="#09155f">CERTIFICACÍON</Heading>
 
         <Container as="section" maxWidth="7xl" my="105px">
 
-          <Heading >BENEFICIOS</Heading>
+          <Heading color="#019CFE">BENEFICIOS</Heading>
 
-          <Flex direction="row" my="40px">
+          <Flex direction="row" my="40px" >
 
             <List spacing={3}>
               <ListItem>
