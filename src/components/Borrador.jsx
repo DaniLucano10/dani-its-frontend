@@ -10,7 +10,7 @@ export const Teachers = () => {
     {
       original: "../src/assets/imgs/img-teachers/carlos.jpg",
       thumbnail: "https://picsum.photos/id/1018/250/150/",
-      description:"sdegbzgbhzsdbgsdgbsdbgsdsgwserhgrehreay n4watb4wta4wt4t4at4wt4vt4t4t4t43t43t34t fsbghzrwshzwreherhrwhwrhwrhrwhrhrhrhrehrhrherher"
+      description: "sdegbzgbhzsdbgsdgbsdbgsdsgwserhgrehreay n4watb4wta4wt4t4at4wt4vt4t4t4t43t43t34t fsbghzrwshzwreherhrwhwrhwrhrwhrhrhrhrehrhrherher"
     },
     {
       original: "https://picsum.photos/id/1015/1000/600/",
@@ -19,27 +19,27 @@ export const Teachers = () => {
     {
       original: "https://picsum.photos/id/1019/1000/600/",
       thumbnail: "https://picsum.photos/id/1019/250/150/",
-      
+
     },
   ];
 
   return (
     <>
       <Container as="section" maxWidth="8xl">
-      <Heading color="#09155f">NUESTROS INSTRUCTORES</Heading>
-      <div style={{width: "70vw", margin:"auto" }} >
-        <ImageGallery items={images} 
-          showPlayButton={false}
-          showFullscreenButton={false}
-          //showThumbnails={false}
-          //showNav={false}
-          showBullets={true}
-          autoPlay={true}
-          slideInterval={3000}
-          slideDuration={1000}
-          
-        />
-      </div>
+        <Heading color="#09155f">NUESTROS INSTRUCTORES</Heading>
+        <div style={{ width: "70vw", margin: "auto" }} >
+          <ImageGallery items={images}
+            showPlayButton={false}
+            showFullscreenButton={false}
+            //showThumbnails={false}
+            //showNav={false}
+            showBullets={true}
+            autoPlay={true}
+            slideInterval={3000}
+            slideDuration={1000}
+
+          />
+        </div>
       </Container>
     </>
   );

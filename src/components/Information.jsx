@@ -1,10 +1,9 @@
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import { FaFacebook, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { CgMail } from "react-icons/cg";
+
 import {
   Box,
-  Button,
   Card,
   CardBody,
   CardFooter,
@@ -22,7 +21,7 @@ import Container from "react-bootstrap/Container";
 export const Information = () => {
   return (
     <>
-      <Box h="100%" bg="#000000" marginTop="40">
+      <Box h="100%" bg="#000000" marginTop="40" my={-300}>
         <Container as="section" maxWidth="8xl">
           <SimpleGrid
             my={-10}

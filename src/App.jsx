@@ -9,6 +9,7 @@ import { Certification } from "./components/Certification";
 import { Teachers } from "./components/Teachers";
 import { Questions } from "./components/Questions";
 import { Information } from "./components/Information";
+import { Images } from "./components/Images";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Heading my="150px" fontSize="40px" color="#09155f">CARGOS POR MÓDULOS</Heading>
         </Container>
         <CourseAccordion />
+        <Images/>
         <Requeriment />
         <PaymentMethods />
         <Certification />

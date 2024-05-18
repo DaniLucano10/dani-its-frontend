@@ -12,7 +12,6 @@ import {
   ModalContent,
   ModalOverlay,
   SimpleGrid,
-  Stack,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -22,7 +21,7 @@ export const PaymentMethods = () => {
   const { isOpen, onOpen, onClose, onOpen1 } = useDisclosure("");
   return (
     <>
-      <Container as="section" maxWidth="8xl" my={-200}>
+      <Container as="section" maxWidth="8xl" my={400}>
         <Heading color="#09155f">METODOS DE PAGO</Heading>
 
         <SimpleGrid

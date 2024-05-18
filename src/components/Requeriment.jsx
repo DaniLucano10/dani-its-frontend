@@ -4,7 +4,7 @@ export const Requeriment = () => {
 
     return (
         <>
-            <Container as="section" maxWidth="8xl" my={350} >
+            <Container as="section" maxWidth="8xl" my={-300} >
                 <Heading color="#09155f">REQUISITOS DE INSCRIPCÍON</Heading>
                 <Text>Envia los siguientes requisitos a tu asesor comercial para formalizar la inscripción</Text>
                 <Container as="section" maxWidth="6xl" my={50}>

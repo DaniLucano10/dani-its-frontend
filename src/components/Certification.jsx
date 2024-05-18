@@ -1,17 +1,14 @@
 import {
-  Box,
   Container,
   Flex,
   Heading,
-  Image,
   List,
   ListIcon,
   ListItem,
 } from "@chakra-ui/react";
-import { Stack } from "react-bootstrap";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import Carousel from "react-bootstrap/Carousel";
+
 
 export const Certification = () => {
   const images = [
@@ -30,7 +27,7 @@ export const Certification = () => {
   ];
   return (
     <>
-      <Container as="section" maxWidth="8xl" my={300}>
+      <Container as="section" maxWidth="8xl" my={-300}>
         <Heading color="#09155f">CERTIFICACÍON</Heading>
 
         <Container as="section" maxWidth="7xl" my="80px" bg="#8ed1fc30">
