@@ -1,5 +1,7 @@
-import { Container } from "@chakra-ui/react";
+import { Container, HStack, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
+
 
 export const Images = () => {
 
@@ -18,7 +20,7 @@ export const Images = () => {
     }
     return (
         <>
-            <Container as="section" maxWidth="10xl" my={400}>
+            <Container as="section" maxWidth="10xl" my={400} >
                 <Slider {...settings}>
                     <div>
                         <img src="../src/assets/imgs/imag/aptim.png" />

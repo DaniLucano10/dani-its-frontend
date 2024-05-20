@@ -21,13 +21,13 @@ import { useState } from "react";
 export const PaymentMethods = () => {
   //const { isOpen, onOpen, onClose, } = useDisclosure("");
 
-  const [isOpen1, setIsOpen1] = useState('false');
-  const [isOpen2, setIsOpen2] = useState('false');
-  const [isOpen3, setIsOpen3] = useState('false');
-  const [isOpen4, setIsOpen4] = useState('false');
-  const [isOpen5, setIsOpen5] = useState('false');
-  const [isOpen7, setIsOpen7] = useState('false');
-  const [isOpen8, setIsOpen8] = useState('false');
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [isOpen5, setIsOpen5] = useState(false);
+  const [isOpen7, setIsOpen7] = useState(false);
+  const [isOpen8, setIsOpen8] = useState(false);
 
   const openModal1 = () => {
     setIsOpen1(true);

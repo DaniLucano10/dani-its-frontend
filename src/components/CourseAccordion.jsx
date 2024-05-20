@@ -1,23 +1,59 @@
-import { Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box, Container, Image, Heading, Stack, } from "@chakra-ui/react";
-
-import { ListItem, UnorderedList, } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Box,
+  Container,
+  Image,
+  Heading,
+  Stack,
+  Link,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { ListItem, UnorderedList } from "@chakra-ui/react";
 
 export const CourseAccordion = () => {
   return (
     <>
+      
+      <Container as="section" maxWidth="8xl">
+        <Heading my="50px" fontSize="60px" color="#09155f"
+          as={motion.h1}
+          initial={{x: "-10px"}}
+          animate={{ x: [50, 150, 50], opacity:1, scale: 1 }}
+          transition="linear 0.2s"
+        >
+          PORTAL{" "}
+        </Heading>
+        <Heading my="-60px" fontSize="60px" color="#019CFE"
+          as={motion.h1}
+          initial={{x: "-50px"}}
+          animate={{ x: [50, 150, 50], opacity:1, scale: 1 }}
+          transition="linear 0.2s"
+        >
+          INFORMATIVO
+        </Heading>
+        <Heading my="150px" fontSize="40px" color="#09155f">
+          CARGOS POR MÓDULOS
+        </Heading>
+      </Container>
       <Container as="section" maxWidth="6xl" h="100%">
         <Stack direction="row">
-          <Image src='../src/assets/imgs/sap_funcional.png' />
+          <Image src="../src/assets/imgs/sap_funcional.png" />
         </Stack>
 
-        <Container margin="-500px -150px 0px 450px" >
-        
-          <Heading fontSize="4xl" my="60px"> CURSO SAP funcional</Heading>
+        <Container margin="-500px -150px 0px 450px">
+          <Heading fontSize="4xl" my="60px">
+            {" "}
+            CURSO SAP funcional
+          </Heading>
 
           <Accordion allowToggle>
             <AccordionItem>
               <h2>
-                <AccordionButton >
+                <AccordionButton>
                   <Box as="span" flex="1" textAlign="left">
                     SAP S/4HANA MM Logística Digital
                   </Box>
@@ -33,6 +69,12 @@ export const CourseAccordion = () => {
                   <ListItem>Asistente de aprovisionamiento</ListItem>
                   <ListItem>Ejecutivos de comercio exterior</ListItem>
                 </UnorderedList>
+                <Link
+                  color="#2C5282"
+                  href="https://its.institute/cursos/sap-s4-pm-mantenimiento-digital"
+                >
+                  <Heading fontSize="15px">Más informacion del curso</Heading>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
 
@@ -53,6 +95,12 @@ export const CourseAccordion = () => {
                   <ListItem>Tecnicos de mantenimiento</ListItem>
                   <ListItem>Controllorer de mantenimiento</ListItem>
                 </UnorderedList>
+                <Link
+                  color="#2C5282"
+                  href="https://its.institute/cursos/sap-s4-pm-mantenimiento-digital"
+                >
+                  <Heading fontSize="15px">Más informacion del curso</Heading>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
 
@@ -75,6 +123,12 @@ export const CourseAccordion = () => {
                   <ListItem>Controller financiero</ListItem>
                   <ListItem>Asistentes contables financieros </ListItem>
                 </UnorderedList>
+                <Link
+                  color="#2C5282"
+                  href="https://its.institute/cursos/sap-s4-fi-finanzas-digitales"
+                >
+                  <Heading fontSize="15px">Más informacion del curso</Heading>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
 
@@ -96,6 +150,12 @@ export const CourseAccordion = () => {
                   <ListItem>Analista de tesorería</ListItem>
                   <ListItem>Asistentes de Pagaduría</ListItem>
                 </UnorderedList>
+                <Link
+                  color="#2C5282"
+                  href="https://its.institute/cursos/sap-s4-tr-gestion-bancaria"
+                >
+                  <Heading fontSize="15px">Más informacion del curso</Heading>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
 
@@ -117,6 +177,12 @@ export const CourseAccordion = () => {
                   <ListItem>Supervisor de talento humano</ListItem>
                   <ListItem>Coordinador de reclutamiento y seleccion</ListItem>
                 </UnorderedList>
+                <Link
+                  color="#2C5282"
+                  href="https://its.institute/cursos/sap-erp-hcm-gestion-de-recursos-humanos"
+                >
+                  <Heading fontSize="15px">Más informacion del curso</Heading>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
 
@@ -138,15 +204,19 @@ export const CourseAccordion = () => {
                   <ListItem>Analistas de cadena de suministros</ListItem>
                   <ListItem>Analistas financieros contables</ListItem>
                 </UnorderedList>
+                <Link
+                  color="#2C5282"
+                  href="https://its.institute/cursos/sap-business-one-gestion-empresarial"
+                >
+                  <Heading fontSize="15px">Más informacion del curso</Heading>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
         </Container>
-
-      </Container>;
-
+      </Container>
+      ;
       <Container as="section" maxWidth="6xl" my="100px">
-
         <Stack direction="row">
           <Image src="../src/assets/imgs/sap-tecnico.png" />
         </Stack>
@@ -157,7 +227,7 @@ export const CourseAccordion = () => {
             <AccordionItem>
               <h2>
                 <AccordionButton>
-                  <Box as='span' flex='1' textAlign='left'>
+                  <Box as="span" flex="1" textAlign="left">
                     Cargos SAP ABAP
                   </Box>
                   <AccordionIcon />
@@ -171,13 +241,19 @@ export const CourseAccordion = () => {
                   <ListItem>Analista Técnico ABAP</ListItem>
                   <ListItem>Arquitecto ABAPER</ListItem>
                 </UnorderedList>
+                <Link
+                  color="#2C5282"
+                  href="https://its.institute/cursos/sap-s4-abap-lenguaje-de-programacion"
+                >
+                  <Heading fontSize="15px">Más informacion del curso</Heading>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
 
             <AccordionItem>
               <h2>
                 <AccordionButton>
-                  <Box as='span' flex='1' textAlign='left'>
+                  <Box as="span" flex="1" textAlign="left">
                     Cargos SAP BTP
                   </Box>
                   <AccordionIcon />
@@ -191,6 +267,12 @@ export const CourseAccordion = () => {
                   <ListItem>programador BTP</ListItem>
                   <ListItem>Analista técnico BTP</ListItem>
                 </UnorderedList>
+                <Link
+                  color="#2C5282"
+                  href="https://its.institute/cursos/sap-btp-business-technology-platform"
+                >
+                  <Heading fontSize="15px">Más informacion del curso</Heading>
+                </Link>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>

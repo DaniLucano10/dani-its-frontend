@@ -30,12 +30,12 @@ export const Information = () => {
           >
             <Card my="30" bg="#000000" color="#FFFFFF">
               <CardHeader>
-                <Heading size="md">
+                <Heading size="md" my="30px">
                   <Link href="https://its.institute/" target="_blank">
                     <Image src="../src/assets/imgs/logo.png" width="40" />
                   </Link>
                 </Heading>
-                <br />
+               
                 <Text fontSize="22px">Respaldado por:</Text>
               </CardHeader>
               <CardBody>

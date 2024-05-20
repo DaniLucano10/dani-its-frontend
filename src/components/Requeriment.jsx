@@ -8,7 +8,7 @@ export const Requeriment = () => {
                 <Heading color="#09155f">REQUISITOS DE INSCRIPCÍON</Heading>
                 <Text>Envia los siguientes requisitos a tu asesor comercial para formalizar la inscripción</Text>
                 <Container as="section" maxWidth="6xl" my={50}>
-                    <Stack direction="row">
+                    <Stack direction="row" >
                         <Card >
                             <CardBody>
                                 <Text color="#000000">Voucher o captura de pago</Text>

@@ -54,7 +54,7 @@ export const Certification = () => {
               </ListItem>
             </List>
 
-            <div style={{ width: "20vw", margin: "auto" }}>
+            <Container style={{ width: "20vw", margin: "auto" }}>
               <ImageGallery
                 items={images}
                 showPlayButton={false}
@@ -66,7 +66,7 @@ export const Certification = () => {
                 slideInterval={3000}
                 slideDuration={1000}
               />
-            </div>
+            </Container>
           </Flex>
         </Container>
       </Container>
