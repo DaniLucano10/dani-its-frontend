@@ -21,8 +21,8 @@ export const CourseAccordion = () => {
       <Container as="section" maxWidth="8xl">
         <Heading my="50px" fontSize="60px" color="#09155f"
           as={motion.h1}
-          initial={{x: "-10px"}}
-          animate={{ x: [50, 150, 50], opacity:1, scale: 1 }}
+          initial={{x: "-20px"}}
+          animate={{ x: [0, 150, 50], opacity:1, scale: 1 }}
           transition="linear 0.2s"
         >
           PORTAL{" "}
@@ -35,6 +35,7 @@ export const CourseAccordion = () => {
         >
           INFORMATIVO
         </Heading>
+        
         <Heading my="150px" fontSize="40px" color="#09155f">
           CARGOS POR MÓDULOS
         </Heading>

@@ -1,6 +1,6 @@
-import { Container, HStack, Image } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
+
 
 
 export const Images = () => {
@@ -23,7 +23,8 @@ export const Images = () => {
             <Container as="section" maxWidth="10xl" my={400} >
                 <Slider {...settings}>
                     <div>
-                        <img src="../src/assets/imgs/imag/aptim.png" />
+                        <img src="../src/assets/imgs/imag/aptim.png" 
+                        />
                     </div>
                     <div>
                         <img src="../src/assets/imgs/imag/articruz.png" />
