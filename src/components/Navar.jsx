@@ -7,7 +7,7 @@ export const Navar = () => {
         <div className="container" style={{marginLeft: "54px"}}>
           <a className="navbar-brand" href="https://its.institute/" target="_blank">
             <img src="../src/assets/imgs/logo.png"
-              width="200" / >
+              width="250" / >
           </a>
           <button
             className="navbar-toggler"

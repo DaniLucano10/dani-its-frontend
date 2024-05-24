@@ -14,6 +14,7 @@ import {
 import { motion } from "framer-motion";
 import { ListItem, UnorderedList } from "@chakra-ui/react";
 
+
 export const CourseAccordion = () => {
   return (
     <>

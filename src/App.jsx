@@ -1,4 +1,3 @@
-
 import "./App.css";
 import { Navar } from "./components/Navar";
 import { Requeriment } from "./components/Requeriment";
@@ -10,25 +9,24 @@ import { Information } from "./components/Information";
 import { Images } from "./components/Images";
 import { Courses } from "./components/Courses";
 import { CourseAccordion } from "./components/CourseAccordion";
+import { Container } from "@chakra-ui/react";
 
 function App() {
-
   return (
-    <>
-      <div>
-     
-        <Navar />
-        <CourseAccordion />
-        {/* <Courses/> */}
-        <Images/>
-        <Requeriment />
-        <PaymentMethods />
-        <Certification />
-        <Teachers />
-        <Questions />
-        <Information />
-      </div>
-    </>
+    <div>
+      <Navar />
+      {/* <CourseAccordion /> */}
+      <Courses />
+      <Container maxW="100%" mt={-400}>
+        <Images />
+      </Container>
+      <Requeriment />
+      <PaymentMethods />
+      <Certification />
+      <Teachers />
+      <Questions />
+      <Information />
+    </div>
   );
 }
 

@@ -79,7 +79,7 @@ export const PaymentMethods = () => {
 
   return (
     <>
-      <Container as="section" maxWidth="8xl" my={400}>
+      <Container as="section" maxWidth="8xl" my={400} >
         <Heading color="#09155f">METODOS DE PAGO</Heading>
 
         <SimpleGrid
@@ -88,9 +88,9 @@ export const PaymentMethods = () => {
           spacing={50}
           templateColumns="repeat(auto-fill, minmax(200px, 4fr))"
         >
-          <Card align="center" bg="#FFFFFF">
+          <Card align="center" bg="#FFFFFF" borderRadius="full" >
             <CardFooter>
-              <Button onClick={openModal1}>
+              <Button  bg="#FFFFFF" onClick={openModal1}>
                 <Image src="../src/assets/imgs/img_pago/bbva1.png" h="35px" />
               </Button>
             </CardFooter>
@@ -135,9 +135,9 @@ export const PaymentMethods = () => {
           </Card>
 
 
-          <Card align="center">
+          <Card align="center" bg="#FFFFFF" borderRadius="full">
             <CardFooter>
-              <Button onClick={openModal2}>
+              <Button  bg="#FFFFFF" onClick={openModal2}>
                 <Image src="../src/assets/imgs/img_pago/bcp1.png" h="35px" />
               </Button>
             </CardFooter>
@@ -181,9 +181,9 @@ export const PaymentMethods = () => {
             </Modal>
           </Card>
 
-          <Card align="center">
+          <Card align="center" bg="#FFFFFF" borderRadius="full">
             <CardFooter>
-              <Button onClick={openModal3}>
+              <Button  bg="#FFFFFF" onClick={openModal3}>
                 <Image src="../src/assets/imgs/img_pago/interbank1.png" h="35px" />
               </Button>
             </CardFooter>
@@ -227,9 +227,9 @@ export const PaymentMethods = () => {
             </Modal>
           </Card>
 
-          <Card align="center">
+          <Card align="center" bg="#FFFFFF" borderRadius="full">
             <CardFooter>
-              <Button onClick={openModal4}>
+              <Button  bg="#FFFFFF" onClick={openModal4}>
                 <Image src="../src/assets/imgs/img_pago/scotiabank1.png" h="35px" />
               </Button>
             </CardFooter>
@@ -273,9 +273,9 @@ export const PaymentMethods = () => {
             </Modal>
           </Card>
 
-          <Card align="center">
+          <Card align="center" bg="#FFFFFF" borderRadius="full">
             <CardFooter>
-              <Button onClick={openModal5}>
+              <Button  bg="#FFFFFF" onClick={openModal5}>
                 <Image src="../src/assets/imgs/img_pago/niubiz1.png" h="35px" />
               </Button>
             </CardFooter>
@@ -319,9 +319,9 @@ export const PaymentMethods = () => {
             </Modal>
           </Card>
 
-          <Card align="center">
+          <Card align="center" bg="#FFFFFF" borderRadius="full">
             <CardFooter>
-              <Button >
+              <Button  bg="#FFFFFF">
                 <Link href="https://www.paypal.com/paypalme/Itsperu" isExternal>
                   <Image src="../src/assets/imgs/img_pago/paypal1.png" h="35px" />
                 </Link>
@@ -329,10 +329,10 @@ export const PaymentMethods = () => {
             </CardFooter>
           </Card>
 
-          <Card align="center">
+          <Card align="center" bg="#FFFFFF" borderRadius="full">
 
             <CardFooter>
-              <Button onClick={openModal7}>
+              <Button  bg="#FFFFFF" onClick={openModal7}>
                 <Image src="../src/assets/imgs/img_pago/plin1.png" h="35px" />
               </Button>
             </CardFooter>
@@ -362,9 +362,9 @@ export const PaymentMethods = () => {
             </Modal>
           </Card>
 
-          <Card align="center">
+          <Card align="center" bg="#FFFFFF" borderRadius="full">
             <CardFooter>
-              <Button onClick={openModal8}>
+              <Button  bg="#FFFFFF" onClick={openModal8}>
                 <Image src="../src/assets/imgs/img_pago/yape1.png" h="35px" />
               </Button>
             </CardFooter>

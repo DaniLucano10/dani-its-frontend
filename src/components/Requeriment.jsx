@@ -9,7 +9,7 @@ export const Requeriment = () => {
                 <Text>Envia los siguientes requisitos a tu asesor comercial para formalizar la inscripción</Text>
                 <Container as="section" maxWidth="6xl" my={50}>
                     <Stack direction="row" >
-                        <Card >
+                        <Card bg="#ccebff" w="250px" h="200px">
                             <CardBody>
                                 <Text color="#000000">Voucher o captura de pago</Text>
                                 <Image
@@ -19,7 +19,7 @@ export const Requeriment = () => {
                             </CardBody>
                         </Card>
 
-                        <Card >
+                        <Card bg="#ccebff">
                             <CardBody>
                                 <Text color="#000000">Correo electrónico personal</Text>
                                 <Image
@@ -29,7 +29,7 @@ export const Requeriment = () => {
                             </CardBody>
                         </Card>
 
-                        <Card>
+                        <Card bg="#ccebff">
                             <CardBody>
                                 <Text color="#000000">Foto de la parte frontal del DNI</Text>
                                 <Image
@@ -39,7 +39,7 @@ export const Requeriment = () => {
                             </CardBody>
                         </Card>
 
-                        <Card >
+                        <Card bg="#ccebff">
                             <CardBody >
                                 <Text color="#000000">Rellenar ficha de inscripción</Text>
                                 <Image

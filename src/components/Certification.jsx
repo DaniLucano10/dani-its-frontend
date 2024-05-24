@@ -1,4 +1,5 @@
 import {
+  Box,
   Container,
   Flex,
   Heading,
@@ -9,13 +10,12 @@ import {
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-
 export const Certification = () => {
   const images = [
     {
       original: "https://picsum.photos/id/1018/250/150/",
       thumbnail: "https://picsum.photos/id/1018/250/150/",
-   },
+    },
     {
       original: "https://picsum.photos/id/1015/1000/600/",
       thumbnail: "https://picsum.photos/id/1015/250/150/",
@@ -29,9 +29,14 @@ export const Certification = () => {
     <>
       <Container as="section" maxWidth="8xl" my={-300}>
         <Heading color="#09155f">CERTIFICACÍON</Heading>
+      </Container>
 
-        <Container as="section" maxWidth="7xl" my="80px" bg="#8ed1fc30">
-          <Heading color="#019CFE" my="80px">BENEFICIOS</Heading>
+      <Box bg="#8ed1fc30" my={350}>
+
+        <Container as="section" maxW="7xl" >
+          <Heading color="#019CFE" my="80px">
+            BENEFICIOS
+          </Heading>
 
           <Flex direction="row" my="40px">
             <List spacing={3}>
@@ -69,7 +74,7 @@ export const Certification = () => {
             </Container>
           </Flex>
         </Container>
-      </Container>
+      </Box>
     </>
   );
 };

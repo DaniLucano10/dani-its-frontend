@@ -20,7 +20,7 @@ export const Images = () => {
     }
     return (
         <>
-            <Container as="section" maxWidth="10xl" my={400} >
+            <Container as="section"  maxWidth="10xl" my={400} >
                 <Slider {...settings}>
                     <div>
                         <img src="../src/assets/imgs/imag/aptim.png" 
