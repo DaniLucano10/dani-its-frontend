@@ -7,13 +7,16 @@ import { Information } from "./components/Information";
 import { Courses } from "./components/Courses";
 import TeacherPage from "./components/TeacherPage";
 import { RequerimentPage } from "./components/RequerimentPage";
+import ImagePage from "./components/ImagePage";
+
 
 
 function App() {
   return (
     <div>
       <Navar />
-      <Courses /> 
+      <Courses />
+      <ImagePage/>
       <RequerimentPage />
       <PaymentMethods />
       <Certification />
