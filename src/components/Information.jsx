@@ -21,21 +21,25 @@ import Container from "react-bootstrap/Container";
 export const Information = () => {
   return (
     <>
-      <Box h="100%" bg="#000000" marginTop="40" my={-300}>
+      <Box maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+        width="100%"
+        overflow="hidden"
+        p="10"
+        m="" h="100%" bg="#000000" >
         <Container as="section" maxWidth="8xl">
           <SimpleGrid
             my={-10}
             spacing={-10}
             templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
           >
-            <Card my="30" bg="#000000" color="#FFFFFF">
+            <Card align="center" bg="#000000 " borderRadius="full" color="#FFFFFF">
               <CardHeader>
                 <Heading size="md" my="30px">
                   <Link href="https://its.institute/" target="_blank">
                     <Image src="../src/assets/imgs/logo.png" width="40" />
                   </Link>
                 </Heading>
-               
+
                 <Text fontSize="22px">Respaldado por:</Text>
               </CardHeader>
               <CardBody>
@@ -55,9 +59,9 @@ export const Information = () => {
               </CardHeader>
               <CardBody>
                 <Text >
-                  SAP Business One <br/>SAP MM S/4HANA Logística Digital <br/> SAP PM
-                  S/4HANA Mantenimiento digital <br/>SAP FI S/4HANA Finanzas
-                  Digitales <br/>SAP TR S/4HANA Gestión Bancaria SAP HCM Gestión
+                  SAP Business One <br />SAP MM S/4HANA Logística Digital <br /> SAP PM
+                  S/4HANA Mantenimiento digital <br />SAP FI S/4HANA Finanzas
+                  Digitales <br />SAP TR S/4HANA Gestión Bancaria SAP HCM Gestión
                   Recursos Humanos
                 </Text>
               </CardBody>
@@ -72,7 +76,7 @@ export const Information = () => {
               </CardHeader>
               <CardBody>
                 <Text>
-                  SAP ABAP S/4HANA Lenguaje de Programación <br/>Plataforma
+                  SAP ABAP S/4HANA Lenguaje de Programación <br />Plataforma
                   tecnológica empresarial SAP BTP
                 </Text>
               </CardBody>

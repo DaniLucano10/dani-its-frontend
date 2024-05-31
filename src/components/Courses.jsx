@@ -13,7 +13,6 @@ import {
   Heading,
   Text,
   Container,
-  Stack,
   Flex,
 } from "@chakra-ui/react";
 
@@ -27,6 +26,7 @@ export const Courses = () => {
           "http://localhost:1337/api/categories?populate=*"
         );
         const data = response.data.data;
+        console.log(response.data);
         setCategories(
           data.map((category) => ({
             id: category.id,
@@ -49,10 +49,15 @@ export const Courses = () => {
 
   return (
     <>
-      <Container as="section" m="100px" my={100}>
+      <Box
+        width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+        overflow="hidden"
+        height="auto"
+        margin="auto"
+        padding="4rem"
+      >
         <Heading
-          my="50px"
-          fontSize="60px"
+          fontSize={{ base: "2xl", md: "4xl", lg: "6xl" }}
           color="#09155f"
           as={motion.h1}
           initial={{ x: "-20px" }}
@@ -60,11 +65,10 @@ export const Courses = () => {
           transition="linear 0.2s"
           fontWeight="extrabold"
         >
-          PORTAL{" "}
+          PORTAL
         </Heading>
         <Heading
-          my="-60px"
-          fontSize="60px"
+          fontSize={{ base: "2xl", md: "4xl", lg: "6xl" }}
           color="#019CFE"
           as={motion.h1}
           initial={{ x: "-50px" }}
@@ -74,19 +78,52 @@ export const Courses = () => {
         >
           INFORMATIVO
         </Heading>
+      </Box>
 
-        <Heading my="150px" fontSize="40px" color="#09155f">
+      <Box
+        maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+        overflow="hidden"
+        padding="4rem"
+        height="auto"
+      >
+        <Heading fontSize={{ base: "lg", md: "xl", lg: "3xl" }} color="#09155f">
           CARGOS POR MÓDULOS
         </Heading>
-      </Container>
-      
-      <Container m="200px" mt="-30px">
+      </Box>
+
+      <Container
+        maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "100%" }}
+        padding={1}
+        margin={1}
+        centerContent
+      >
         {categories?.map((category) => (
-          <Container key={category.id} maxWidth="1000px">
-            <Stack key={category.id} direction="row">
-              <Image src={`http://localhost:1337${category.img}`} />
-            </Stack>
-            <Container margin="-500px -150px 0px 450px" h={600}>
+          <Flex justify="space-between" key={category.id}>
+            <Box
+              key={category.id}
+              maxW="100%"
+              p="4"
+              overflow="hidden"
+              padding="4rem"
+              height="auto"
+            >
+              <Image
+                src={`http://localhost:1337${category.img}`}
+                boxSize={{ base: "100%", md: "auto" }}
+                objectFit="cover"
+                mr={{ base: "5", md: "40" }}
+                mb={{ base: "30", md: "30" }}
+              />
+            </Box>
+            <Container
+              maxW="100%"
+              position="relative"
+              left={{ base: "50%", md: "10%" }}
+              top={{ base: "10%", md: "20%" }}
+              overflow="hidden"
+              p="4"
+              mb={0}
+            >
               <Text my={-8} fontSize="4xl" h={100}>
                 {category.name}
               </Text>
@@ -111,8 +148,8 @@ export const Courses = () => {
                             padding="4"
                             borderRadius="md"
                           >
-                            <Text color="#000000" fontSize='sm'>
-                            <Markdown>{course.description}</Markdown>
+                            <Text color="#000000" fontSize="sm">
+                              <Markdown>{course.description}</Markdown>
                             </Text>
                           </Box>
                         </AccordionPanel>
@@ -122,7 +159,7 @@ export const Courses = () => {
                 </Accordion>
               </Flex>
             </Container>
-          </Container>
+          </Flex>
         ))}
       </Container>
     </>

@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardFooter,
@@ -15,6 +16,7 @@ import {
   ModalOverlay,
   SimpleGrid,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -76,11 +78,16 @@ export const PaymentMethods = () => {
   const closeModal8 = () => {
     setIsOpen8(false);
   }
+  const textAlign = useBreakpointValue({ base: "center", md: "left" });
 
   return (
     <>
-      <Container as="section" maxWidth="8xl" my={400} >
-        <Heading color="#09155f">METODOS DE PAGO</Heading>
+      <Box maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+                width="100%"
+                overflow="hidden"
+                p="10"
+                m="4" >
+        <Heading  textAlign={textAlign} fontSize={{ base: "4xl", md: "4xl", lg: "4xl" }} color="#09155f">METODOS DE PAGO</Heading>
 
         <SimpleGrid
           maxW="6xl"
@@ -397,7 +404,7 @@ export const PaymentMethods = () => {
 
 
         </SimpleGrid>
-      </Container>
+      </Box>
     </>
   );
 };
