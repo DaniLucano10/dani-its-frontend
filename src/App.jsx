@@ -18,11 +18,11 @@ function App() {
       <Courses />
       <ImagePage/>
       <RequerimentPage />
-      <PaymentMethods />
+      {/* <PaymentMethods />
       <Certification />
       <TeacherPage />
       <Questions />
-      <Information />
+      <Information /> */}
     </div>
   );
 }

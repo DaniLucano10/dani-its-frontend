@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Markdown from "markdown-to-jsx";
-import { motion } from "framer-motion";
+
 import {
   Accordion,
   AccordionItem,
@@ -15,6 +15,7 @@ import {
   Container,
   Flex,
 } from "@chakra-ui/react";
+import { Title } from "./Title";
 
 export const Courses = () => {
   const [categories, setCategories] = useState([]);
@@ -49,95 +50,64 @@ export const Courses = () => {
 
   return (
     <>
+      <Title />
       <Box
-        width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
         overflow="hidden"
         height="auto"
         margin="auto"
-        padding="4rem"
-      >
-        <Heading
-          fontSize={{ base: "2xl", md: "4xl", lg: "6xl" }}
-          color="#09155f"
-          as={motion.h1}
-          initial={{ x: "-20px" }}
-          animate={{ x: [50, 150, 10], opacity: 1, scale: 1 }}
-          transition="linear 0.2s"
-          fontWeight="extrabold"
-        >
-          PORTAL
-        </Heading>
-        <Heading
-          fontSize={{ base: "2xl", md: "4xl", lg: "6xl" }}
-          color="#019CFE"
-          as={motion.h1}
-          initial={{ x: "-50px" }}
-          animate={{ x: [50, 150, 10], opacity: 1, scale: 1 }}
-          transition="linear 0.2s"
-          fontWeight="extrabold"
-        >
-          INFORMATIVO
-        </Heading>
-      </Box>
-
-      <Box
-        maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-        overflow="hidden"
-        padding="4rem"
-        height="auto"
-      >
-        <Heading fontSize={{ base: "lg", md: "xl", lg: "3xl" }} color="#09155f">
-          CARGOS POR MÓDULOS
-        </Heading>
-      </Box>
-
-      <Container
-        maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%", xl: "100%" }}
-        padding={1}
-        margin={1}
-        centerContent
+        p={{ base: "2rem", md: "4rem", xl: "8rem" }}
+        mt={{ base: "-6rem", md: "-7rem", xl: "-15rem" }}
       >
         {categories?.map((category) => (
-          <Flex justify="space-between" key={category.id}>
+          <Box key={category.id}>
             <Box
-              key={category.id}
-              maxW="100%"
-              p="4"
-              overflow="hidden"
-              padding="4rem"
-              height="auto"
+              textAlign={{ base: "center", md: "30xl" }}
+              mb={{ base: "-4rem", md: "-4rem" }} // Reduced margin bottom for mobile
+              mt={{ base: "1rem", md: "-1rem" }} 
             >
-              <Image
-                src={`http://localhost:1337${category.img}`}
-                boxSize={{ base: "100%", md: "auto" }}
-                objectFit="cover"
-                mr={{ base: "5", md: "40" }}
-                mb={{ base: "30", md: "30" }}
-              />
+              <Text fontSize="2xl" mt={{ base: "2rem", md: "3rem", xl: "3rem" }}>{category.name}</Text>
             </Box>
-            <Container
-              maxW="100%"
-              position="relative"
-              left={{ base: "50%", md: "10%" }}
-              top={{ base: "10%", md: "20%" }}
-              overflow="hidden"
-              p="4"
-              mb={0}
-            >
-              <Text my={-8} fontSize="4xl" h={100}>
-                {category.name}
-              </Text>
-              <Flex>
+            <Flex direction={{ base: "column", md: "row" }}>
+              <Box
+                key={category.id}
+                maxW="100%"
+                overflow="hidden"
+                padding="4rem"
+                height="auto"
+                flex={{ base: 1, md: 1 }}
+              >
+                <Image
+                  src={`http://localhost:1337${category.img}`}
+                  boxSize={{ base: "100%", md: "auto" }}
+                  objectFit="cover"
+                  display="block"
+                  mx={{ base: "auto", md: "0" }}
+                  mb={{ base: "2rem", md: "0" }}
+                />
+              </Box>
+              <Box
+                mt={{ base: "-6em", md: "3em", xl: "3em" }}
+                flex={{ base: 1, md: 1.5 }}
+                mr={{ base: -20, md: 30, xl: 40 }}
+                p={{ base: 5 }}
+                width={{ base: "100%", md: "auto" }}
+              >
                 <Accordion allowToggle>
                   {category.courses?.map((course) => (
-                    <AccordionItem key={course.id}>
+                    <AccordionItem key={course.id} border="1px solid #E2E8F0">
                       <h2>
-                        <AccordionButton width={600}>
-                          <Box as="span" flex="1" textAlign="left">
+                        <AccordionButton width="100%">
+                          <Box
+                            as="span"
+                            flex="1"
+                            textAlign="left"
+                            color="inherit"
+                            mt={6}
+                          >
                             {course.title}
                           </Box>
 
-                          <AccordionIcon />
+                          <AccordionIcon boxSize="1.5em" />
                         </AccordionButton>
                         <AccordionPanel pb={4} border="1px solid #ccc">
                           <Box
@@ -148,7 +118,7 @@ export const Courses = () => {
                             padding="4"
                             borderRadius="md"
                           >
-                            <Text color="#000000" fontSize="sm">
+                            <Text color="#000000" fontSize="lg">
                               <Markdown>{course.description}</Markdown>
                             </Text>
                           </Box>
@@ -157,11 +127,11 @@ export const Courses = () => {
                     </AccordionItem>
                   ))}
                 </Accordion>
-              </Flex>
-            </Container>
-          </Flex>
+              </Box>
+            </Flex>
+          </Box>
         ))}
-      </Container>
+      </Box>
     </>
   );
 };

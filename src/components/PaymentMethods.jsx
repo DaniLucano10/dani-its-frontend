@@ -82,11 +82,13 @@ export const PaymentMethods = () => {
 
   return (
     <>
-      <Box maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-                width="100%"
-                overflow="hidden"
-                p="10"
-                m="4" >
+      <Box 
+      overflow="hidden"
+      height="auto"
+      margin="auto"
+      ml="7rem"
+      mt="4rem"
+       >
         <Heading  textAlign={textAlign} fontSize={{ base: "4xl", md: "4xl", lg: "4xl" }} color="#09155f">METODOS DE PAGO</Heading>
 
         <SimpleGrid
@@ -121,7 +123,7 @@ export const PaymentMethods = () => {
                 <ModalCloseButton />
                 <Container>
                   <ModalBody>
-                    <Heading ontSize="35px" color="RGBA(0, 0, 0, 0.64)">
+                    <Heading fontSize="35px" color="RGBA(0, 0, 0, 0.64)">
                       CUENTA CORRIENTE:
                     </Heading>
                     <Text fontSize="35px" color="RGBA(0, 0, 0, 0.64)">
@@ -168,7 +170,7 @@ export const PaymentMethods = () => {
                 <ModalCloseButton />
                 <Container>
                   <ModalBody>
-                    <Heading ontSize="35px" color="RGBA(0, 0, 0, 0.64)">
+                    <Heading FontSize="35px" color="RGBA(0, 0, 0, 0.64)">
                       CUENTA CORRIENTE:
                     </Heading>
                     <Text fontSize="35px" color="RGBA(0, 0, 0, 0.64)">
@@ -214,7 +216,7 @@ export const PaymentMethods = () => {
                 <ModalCloseButton />
                 <Container>
                   <ModalBody>
-                    <Heading ontSize="35px" color="RGBA(0, 0, 0, 0.64)">
+                    <Heading fontSize="35px" color="RGBA(0, 0, 0, 0.64)">
                       CUENTA DE AHORROS:
                     </Heading>
                     <Text fontSize="35px" color="RGBA(0, 0, 0, 0.64)">

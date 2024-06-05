@@ -34,11 +34,11 @@ export const Certification = () => {
   return (
     <>
       <Box
-        maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+       
         width="100%"
         overflow="hidden"
-        p="10"
-        m="10"
+        ml="7rem"
+        mt="4rem"
       >
         <Heading
           textAlign={textAlign}

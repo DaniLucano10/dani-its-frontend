@@ -6,11 +6,12 @@ export const Questions = () => {
   const textAlign = useBreakpointValue({ base: "center", md: "left" });
   return (
     <>
-      <Box maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+      <Box 
         width="100%"
         overflow="hidden"
-        p="10"
-        m="10">
+        ml="7rem"
+        mt="4rem"
+        >
         <Heading textAlign={textAlign} color="#09155f" fontSize={{ base: "4xl", md: "4xl", lg: "4xl" }}>
           PREGUNTAS FRECUENTES
         </Heading>

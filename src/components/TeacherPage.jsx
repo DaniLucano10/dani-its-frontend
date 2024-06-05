@@ -1,42 +1,46 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import { Box, Flex, Heading, IconButton, Image, Text, useBreakpointValue } from "@chakra-ui/react";
-import { useRef, useState } from 'react';
-import { useEffect } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import axios from 'axios';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import {
+  Box,
+  Flex,
+  Heading,
+  IconButton,
+  Image,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import { useRef, useState } from "react";
+import { useEffect } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import axios from "axios";
 
 function TeacherPage() {
-    const [teachers, setTeachers] = useState([]);
+  const [teachers, setTeachers] = useState([]);
 
-    
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const response = await axios.get(
-              "http://localhost:1337/api/teachers?populate=*"
-            );
-            const data = response.data.data;
-            console.log(response.data)
-            setTeachers(
-                data.map((teacher) => ({
-                    id: teacher.id,
-                    name: teacher.attributes.name,
-                    date: teacher.attributes.date,
-                    information: teacher.attributes.information,
-                    image: teacher.attributes.image.data[0].attributes.url,
-                  })),
-            );
-          } catch (error) {
-            console.error("Error fetching data:", error);
-          }
-        };
-    
-        fetchData();
-      }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:1337/api/teachers?populate=*"
+        );
+        const data = response.data.data;
+        console.log(response.data);
+        setTeachers(
+          data.map((teacher) => ({
+            id: teacher.id,
+            name: teacher.attributes.name,
+            date: teacher.attributes.date,
+            information: teacher.attributes.information,
+            image: teacher.attributes.image.data[0].attributes.url,
+          }))
+        );
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    
-
+    fetchData();
+  }, []);
 
   const slidesPerView = useBreakpointValue({ base: 1, md: 1, lg: 1 });
   const swiperRef = useRef(null);
@@ -70,14 +74,21 @@ function TeacherPage() {
   const textAlign = useBreakpointValue({ base: "center", md: "left" });
 
   return (
-
     <>
-      <Box maxW={{ base: "90%", sm: "80%", md: "70%", lg: "60%" }}
+      <Box
+        maxW={{ base: "90%", sm: "80%", md: "70%", lg: "60%" }}
         width="100%"
         overflow="hidden"
-        p="10"
-        m="10">
-        <Heading textAlign={textAlign} color="#09155f" fontSize={{ base: "4xl", md: "4xl", lg: "4xl" }}>NUESTROS INSTRUCTORES</Heading>
+        ml="7rem"
+        mt="4rem"
+      >
+        <Heading
+          textAlign={textAlign}
+          color="#09155f"
+          fontSize={{ base: "4xl", md: "4xl", lg: "4xl" }}
+        >
+          NUESTROS INSTRUCTORES
+        </Heading>
       </Box>
       <Swiper
         ref={swiperRef}
@@ -85,62 +96,63 @@ function TeacherPage() {
         slidesPerView={slidesPerView}
         pagination={{ clickable: true }}
       >
-      {teachers?.map((teacher) =>(
-
-        <SwiperSlide key={teacher.id}>
-          <Flex
-            height="40vh"
-            alignItems="center"
-            justifyContent="center"
-            p="4"
-          >
+        {teachers?.map((teacher) => (
+          <SwiperSlide key={teacher.id}>
             <Flex
-              direction="column"
+              height="40vh"
               alignItems="center"
-              overflow="hidden"
+              justifyContent="center"
               p="4"
-              maxW={{ base: '90%', md: '80%', lg: '60%' }}
             >
               <Flex
-                direction={{ base: 'column', md: 'row' }}
+                direction="column"
                 alignItems="center"
-                mb="4"
+                overflow="hidden"
+                p="4"
+                maxW={{ base: "90%", md: "80%", lg: "60%" }}
               >
-                <Image
-                  src={`http://localhost:1337${teacher.image}`}
-                  alt="Example Image"
-                  boxSize={{ base: "50px", md: "70px", lg: "100px" }}
-                  objectFit="cover"
-                  mr={{ base: "0", md: "4" }}
-                  mb={{ base: "4", md: "0" }}
-                />
-                <Box>
-                  <Text
-                    fontSize={{ base: "lg", md: "xl", lg: "xl" }}
-                    fontWeight="bold"
-                    textAlign={{ base: 'center', md: 'left' }}
-                    whiteSpace="pre-wrap"
-                    color="#09155f"
-                  >
-                    {teacher.name}
+                <Flex
+                  direction={{ base: "column", md: "row" }}
+                  alignItems="center"
+                  mb="4"
+                >
+                  <Image
+                    src={`http://localhost:1337${teacher.image}`}
+                    alt="Example Image"
+                    boxSize={{ base: "50px", md: "70px", lg: "100px" }}
+                    objectFit="cover"
+                    mr={{ base: "0", md: "4" }}
+                    mb={{ base: "4", md: "0" }}
+                  />
+                  <Box>
+                    <Text
+                      fontSize={{ base: "lg", md: "xl", lg: "xl" }}
+                      fontWeight="bold"
+                      textAlign={{ base: "center", md: "left" }}
+                      whiteSpace="pre-wrap"
+                      color="#09155f"
+                    >
+                      {teacher.name}
+                    </Text>
+                    <Text
+                      color="#09155f"
+                      textAlign={{ base: "left", md: "center" }}
+                    >
+                      {teacher.date}
+                    </Text>
+                  </Box>
+                </Flex>
 
-                  </Text>
-                  <Text color="#09155f" textAlign={{ base: "left", md: "center" }}>{ teacher.date}</Text>
-                </Box>
+                <Text
+                  fontSize={{ base: "md", md: "lg", lg: "xl" }}
+                  textAlign="center"
+                >
+                  {teacher.information}
+                </Text>
               </Flex>
-
-              <Text
-                fontSize={{ base: "md", md: "lg", lg: "xl" }}
-                textAlign="center"
-              >
-               {teacher.information}
-              </Text>
             </Flex>
-          </Flex>
-        </SwiperSlide>
-
-       
-    ))}
+          </SwiperSlide>
+        ))}
 
         <IconButton
           icon={<ChevronLeftIcon boxSize="35px" color="blue.500" />}

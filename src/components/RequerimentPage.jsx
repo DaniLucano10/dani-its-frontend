@@ -17,11 +17,11 @@ export const RequerimentPage = () => {
   return (
     <>
       <Box
-        maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-        width="100%"
         overflow="hidden"
-        p="10"
-        m="4"
+        height="auto"
+        margin="auto"
+        ml={{base:"center", md: "7rem", xl:"7rem"}}
+        mt="4rem"
       >
         <Heading
           textAlign={textAlign}
@@ -30,18 +30,23 @@ export const RequerimentPage = () => {
         >
           REQUISITOS DE INSCRIPCÍON
         </Heading>
-        <Text>
+        <Text fontSize={{ base: "lg", md: "xl", lg: "xl" }} ml={{base:"2rem", md: "0rem", xl:"0rem"}}>
           Envia los siguientes requisitos a tu asesor comercial para formalizar
           la inscripción
         </Text>
         <Container
-          maxW={{ base: "100%", sm: "80%", md: "70%", lg: "60%", xl: "70%" }}
-          p={{ base: 0, md: 0 }}
+          maxW={{ base: "70%", sm: "90%", md: "90%", lg: "90%", xl: "90%" }}
+          p={{ base: "2", md: "4", lg: "10" }}
         >
           <Stack spacing={4} direction={{ base: "column", md: "row" }}>
-            <Card bg="#ccebff" w="250px" h="200px">
+            <Card
+              bg="#ccebff"
+              w="100%"
+              borderRadius="1.5rem"
+              overflow="hidden"
+            >
               <CardBody>
-                <Text color="#000000">Voucher o captura de pago</Text>
+                <Text fontSize={{ base: "lg", md: "lg", lg: "lg" }} color="#000000">Voucher o captura de pago</Text>
                 <Flex align="center" justify="center">
                   <Image
                     boxSize={{ base: "80px", md: "100px" }}
@@ -55,7 +60,12 @@ export const RequerimentPage = () => {
               </CardBody>
             </Card>
 
-            <Card bg="#ccebff" w="250px" h="200px">
+            <Card 
+              bg="#ccebff"
+              w="100%"
+              borderRadius="1.5rem"
+              overflow="hidden"
+            >
               <CardBody>
                 <Text color="#000000">Correo electrónico personal</Text>
                 <Flex align="center" justify="center">
@@ -71,8 +81,13 @@ export const RequerimentPage = () => {
               </CardBody>
             </Card>
 
-            <Card bg="#ccebff" w="250px" h="200px">
-              <CardBody w="270px">
+            <Card
+              bg="#ccebff"
+              w="100%"
+              borderRadius="1.5rem"
+              overflow="hidden"
+            >
+              <CardBody>
                 <Text color="#000000">Foto de la parte frontal del DNI</Text>
                 <Flex align="center" justify="center">
                   <Image
@@ -87,10 +102,15 @@ export const RequerimentPage = () => {
               </CardBody>
             </Card>
 
-            <Card bg="#ccebff" w="250px" h="200px">
+            <Card 
+              bg="#ccebff"
+              w="100%"
+              borderRadius="1.5rem"
+              overflow="hidden"
+            >
               <CardBody>
                 <Text color="#000000">Rellenar ficha de inscripción</Text>
-                <Flex align="center" justify="center">
+                <Flex align="center" justify="center">  
                   <Image
                     boxSize="100px"
                     src="../src/assets/imgs/ficha.jpg"
