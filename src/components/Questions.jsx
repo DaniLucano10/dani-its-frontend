@@ -7,21 +7,20 @@ export const Questions = () => {
   return (
     <>
       <Box 
-        width="100%"
         overflow="hidden"
-        ml="7rem"
-        mt="4rem"
+        ml={{ base: "center", md: "7rem" }}
+        mt={{base: "0rem", xl: "4rem"}}
         >
-        <Heading textAlign={textAlign} color="#09155f" fontSize={{ base: "4xl", md: "4xl", lg: "4xl" }}>
+        <Heading ml={{ base: "-0.5em", md: "0rem" }} textAlign={textAlign} color="#09155f" fontSize={{ base: "3xl", md: "4xl", lg: "4xl" }}>
           PREGUNTAS FRECUENTES
         </Heading>
 
         <Box 
           maxW={{ base: "80%", sm: "80%", md: "60%", lg: "70%" }}
-          width="100%"
+          
           overflow="hidden"
-          p="4"
-          m="4"
+          ml={{base: "2rem", xl: "2rem"}}
+          mt={{base: "2rem", xl: "2rem"}}
            textAlign="left"
            justifyContent="center"
           >

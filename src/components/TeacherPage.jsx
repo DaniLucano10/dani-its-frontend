@@ -69,7 +69,7 @@ function TeacherPage() {
   };
 
   const iconSize = useBreakpointValue({ base: "2px", md: "32px" });
-  const leftPosition = useBreakpointValue({ base: "5%", md: "100px" });
+  const leftPosition = useBreakpointValue({ base: "-2%",md: "90px",xl: "100px" });
 
   const textAlign = useBreakpointValue({ base: "center", md: "left" });
 
@@ -77,15 +77,15 @@ function TeacherPage() {
     <>
       <Box
         maxW={{ base: "90%", sm: "80%", md: "70%", lg: "60%" }}
-        width="100%"
         overflow="hidden"
-        ml="7rem"
+        ml={{ base: "center", md: "7rem" }}
         mt="4rem"
       >
         <Heading
           textAlign={textAlign}
           color="#09155f"
           fontSize={{ base: "4xl", md: "4xl", lg: "4xl" }}
+       
         >
           NUESTROS INSTRUCTORES
         </Heading>
@@ -102,14 +102,13 @@ function TeacherPage() {
               height="40vh"
               alignItems="center"
               justifyContent="center"
-              p="4"
+              mt={{base: 10, md:10, xl: 10}}
             >
               <Flex
                 direction="column"
                 alignItems="center"
                 overflow="hidden"
-                p="4"
-                maxW={{ base: "90%", md: "80%", lg: "60%" }}
+                maxW={{ base: "90%", md: "80%", lg: "70%" }}
               >
                 <Flex
                   direction={{ base: "column", md: "row" }}
@@ -126,7 +125,7 @@ function TeacherPage() {
                   />
                   <Box>
                     <Text
-                      fontSize={{ base: "lg", md: "xl", lg: "xl" }}
+                      fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
                       fontWeight="bold"
                       textAlign={{ base: "center", md: "left" }}
                       whiteSpace="pre-wrap"
@@ -135,8 +134,10 @@ function TeacherPage() {
                       {teacher.name}
                     </Text>
                     <Text
+                      fontSize="xl"
                       color="#09155f"
                       textAlign={{ base: "left", md: "center" }}
+                      mt={{base: -4, xl: -5}}
                     >
                       {teacher.date}
                     </Text>
@@ -144,8 +145,12 @@ function TeacherPage() {
                 </Flex>
 
                 <Text
-                  fontSize={{ base: "md", md: "lg", lg: "xl" }}
+                  fontSize={{ base: "md", md: "lg", lg: "2xl" }}
                   textAlign="center"
+                  bg="#ccebff"
+                  borderRadius="10px"
+                  padding={{base: 5, md:5}}
+                  mt={{base: -5, md: 8}}
                 >
                   {teacher.information}
                 </Text>
@@ -159,24 +164,26 @@ function TeacherPage() {
           aria-label="Prev"
           onClick={goPrev}
           pos="absolute"
-          top="50%"
+          top={{base: "70%", md: "60%", xl: "50%"}}
           left={leftPosition}
           transform="translateY(-50%)"
           bg="transparent"
           _hover={{ bg: "transparent" }}
           size={iconSize}
+          _focus={{ outline: "none" }}
         />
         <IconButton
           icon={<ChevronRightIcon boxSize="35px" color="blue.500" />}
           aria-label="Next"
           onClick={goNext}
           pos="absolute"
-          top="50%"
-          right="15"
+          top={{base: "70%", md: "60%", xl: "50%"}}
+          right={{base: "-1%", md: "10%", xl: "10%"}}
           transform="translateY(-50%)"
           bg="transparent"
           _hover={{ bg: "transparent" }}
           size={iconSize}
+          _focus={{ outline: "none" }}
         />
       </Swiper>
     </>

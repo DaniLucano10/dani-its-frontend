@@ -8,21 +8,24 @@ import { Courses } from "./components/Courses";
 import TeacherPage from "./components/TeacherPage";
 import { RequerimentPage } from "./components/RequerimentPage";
 import ImagePage from "./components/ImagePage";
+import { Icon } from "./components/Icon";
 
 
 
 function App() {
   return (
     <div>
+    {/* <Borrador /> */}
+      <Icon />
       <Navar />
       <Courses />
       <ImagePage/>
       <RequerimentPage />
-      {/* <PaymentMethods />
+      <PaymentMethods />
       <Certification />
       <TeacherPage />
       <Questions />
-      <Information /> */}
+      <Information /> 
     </div>
   );
 }

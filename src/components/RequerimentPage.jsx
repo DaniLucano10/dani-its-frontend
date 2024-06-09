@@ -30,7 +30,7 @@ export const RequerimentPage = () => {
         >
           REQUISITOS DE INSCRIPCÍON
         </Heading>
-        <Text fontSize={{ base: "lg", md: "xl", lg: "xl" }} ml={{base:"2rem", md: "0rem", xl:"0rem"}}>
+        <Text fontSize={{ base: "lg", md: "xl", lg: "xl" }} ml={{base:"2rem", md: "0rem", xl:"0rem"}} >
           Envia los siguientes requisitos a tu asesor comercial para formalizar
           la inscripción
         </Text>

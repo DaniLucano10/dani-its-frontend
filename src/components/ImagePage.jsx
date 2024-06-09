@@ -1,6 +1,4 @@
-import React from "react";
 import { Box, Flex } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -62,22 +60,26 @@ const settings = {
 const ImagePage = () => {
   return (
     <Box
-      maxW="100%"
-      mx="auto"
-      p={4}
-      bg="#f3f6f6" 
-      
+      overflow="hidden"
+      margin="auto"
+      ml={{ base: "center", md: "center" }}
+      mt={{ base: "0rem", lg: "-4rem", xl: "-7rem" }}
+      bg="#f3f6f6"
     >
-        
       <Slider {...settings}>
         {images.map((image, index) => (
-          <Box key={index} as="figure" w="100%" >
-            <Flex align="center" justify="center" h="100%"
-            >
+          <Box key={index} as="figure" mt={2}>
+            <Flex align="center" justifyContent="center">
               <img
                 src={image}
                 alt={`Slide ${index}`}
-                style={{ width: '30%', height: '10%', objectFit: 'cover', display: 'block', margin: 'auto' }}
+                style={{
+                  width: "7rem", // tamaño fijo para las imágenes
+                  height: "5rem", // tamaño fijo para las imágenes
+                  objectFit: "contain",
+                  display: "block",
+                  margin: "auto",
+                }}
               />
             </Flex>
           </Box>

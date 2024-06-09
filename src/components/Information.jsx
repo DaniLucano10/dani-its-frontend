@@ -16,25 +16,25 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import Container from "react-bootstrap/Container";
 
 export const Information = () => {
   return (
     <>
-      <Box maxW={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-        width="100%"
+      <Box
         overflow="hidden"
-        p="10"
-        m="" h="100%" bg="#000000" >
-        <Container as="section" maxWidth="8xl">
+        ml={{ base: "center", md: "0rem" }}
+        mt={{base: "4rem", md: "5rem"}}
+        bg="#000000" >
+        <Box
+          mt={{ base: 10, xl: 10 }}
+          ml={{ base: "center", xl: "30" }}
+        >
           <SimpleGrid
-            my={-10}
-            spacing={-10}
-            templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+            templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(4, 1fr)' }}
           >
-            <Card align="center" bg="#000000 " borderRadius="full" color="#FFFFFF">
+            <Card align="center" bg="#000000 " borderRadius="full" color="#FFFFFF" ml={{ base: "center" }} >
               <CardHeader>
-                <Heading size="md" my="30px">
+                <Heading size="md" >
                   <Link href="https://its.institute/" target="_blank">
                     <Image src="../src/assets/imgs/logo.png" width="40" />
                   </Link>
@@ -50,7 +50,7 @@ export const Information = () => {
               </CardBody>
               <CardFooter></CardFooter>
             </Card>
-            <Card my="30" bg="#000000" color="#FFFFFF">
+            <Card my={{ base: -5, xl: "30" }} bg="#000000" color="#FFFFFF">
               <CardHeader>
                 <Heading size="md" color="#019CFE">
                   {" "}
@@ -67,7 +67,7 @@ export const Information = () => {
               </CardBody>
               <CardFooter></CardFooter>
             </Card>
-            <Card my="30" bg="#000000" color="#FFFFFF">
+            <Card my={{ base: -5, xl: "30" }} bg="#000000" color="#FFFFFF">
               <CardHeader>
                 <Heading size="md" color="#019CFE">
                   {" "}
@@ -83,7 +83,7 @@ export const Information = () => {
               <CardFooter></CardFooter>
             </Card>
 
-            <Card my="30" bg="#000000" color="#FFFFFF">
+            <Card my={{ base: -5, xl: "30" }} bg="#000000" color="#FFFFFF">
               <CardHeader>
                 <Heading size="md" color="#019CFE">
                   {" "}
@@ -178,11 +178,12 @@ export const Information = () => {
               <CardFooter></CardFooter>
             </Card>
           </SimpleGrid>
-          <Text as="center" color="#FFFFFF" p={5} fontSize={25}>
-            © 2024 ITS.INSTITUTE, todos los derechos reservados.
-          </Text>
-        </Container>
+
+        </Box>
       </Box>
+      <Text as="center" bg="black" color="#FFFFFF" p={5} fontSize={20}>
+        © 2024 ITS.INSTITUTE, todos los derechos reservados.
+      </Text>
     </>
   );
 };

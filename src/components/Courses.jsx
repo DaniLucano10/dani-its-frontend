@@ -10,9 +10,7 @@ import {
   AccordionIcon,
   Box,
   Image,
-  Heading,
   Text,
-  Container,
   Flex,
 } from "@chakra-ui/react";
 import { Title } from "./Title";
@@ -63,9 +61,15 @@ export const Courses = () => {
             <Box
               textAlign={{ base: "center", md: "30xl" }}
               mb={{ base: "-4rem", md: "-4rem" }} // Reduced margin bottom for mobile
-              mt={{ base: "1rem", md: "-1rem" }} 
+              mt={{ base: "1rem", md: "-1rem" }}
             >
-              <Text fontSize="2xl" mt={{ base: "2rem", md: "3rem", xl: "3rem" }}>{category.name}</Text>
+              <Text
+                fontSize="2xl"
+                mt={{ base: "2rem", md: "3rem", xl: "3rem" }}
+                color="black"
+              >
+                {category.name}
+              </Text>
             </Box>
             <Flex direction={{ base: "column", md: "row" }}>
               <Box
@@ -101,7 +105,7 @@ export const Courses = () => {
                             as="span"
                             flex="1"
                             textAlign="left"
-                            color="inherit"
+                            color=""
                             mt={6}
                           >
                             {course.title}
@@ -117,6 +121,7 @@ export const Courses = () => {
                             backgroundColor=""
                             padding="4"
                             borderRadius="md"
+                            ml={{ base: "-10" }}
                           >
                             <Text color="#000000" fontSize="lg">
                               <Markdown>{course.description}</Markdown>
